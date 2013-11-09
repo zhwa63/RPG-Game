@@ -1,0 +1,21 @@
+g_characterProperties =
+{	
+	m_idleToMoveThreshold = 0.01
+}
+
+function ShouldMove()
+	return (hkbGetVariable("MoveSpeed") >= g_characterProperties.m_idleToMoveThreshold);
+end
+
+function onUpdateIdle()
+	if (ShouldMove()) then
+		hkbFireEvent("MoveStart");
+	end
+end
+
+function onUpdateMove()
+	-- should we return to idle?
+	if (ShouldMove() == false) then
+		hkbFireEvent("MoveStop");
+	end
+end
