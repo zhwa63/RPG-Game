@@ -1,13 +1,9 @@
 Nov 10 2013 
 
 Peggy Li
-
 Angela Zhou
-
 Zixin (Yin Yin) Lu
-
 Allan Soria
-
 Courtney Laux
 
 Puzzle Crawler
